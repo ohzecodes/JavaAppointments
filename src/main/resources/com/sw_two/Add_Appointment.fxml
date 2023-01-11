@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="714.0" prefWidth="583.0"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.sw_two.AppointmentAddCtrl">
+
+  <children>
+    <Text layoutX="46.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%ADDAPPOINTMENT" textAlignment="CENTER" wrappingWidth="500.744140625">
+      <font>
+        <Font name="Arial" size="45.0" />
+      </font>
+    </Text>
+    <GridPane layoutX="30.0" layoutY="76.0" prefHeight="517.0" prefWidth="501.0">
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="194.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="317.0" minWidth="10.0" prefWidth="251.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="80.0" minHeight="20.0" prefHeight="80.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="14.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+
+
+        <TextField fx:id="AppointmentId" GridPane.columnIndex="1" />
+        <TextField fx:id="AppointmentTitle" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextArea fx:id="AppointmentDescription" prefHeight="54.0" prefWidth="291.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="AppointmentLocation" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <DatePicker fx:id="StartDate" prefHeight="25.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <DatePicker fx:id="EndDate" prefHeight="25.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%LOCATION" textAlignment="CENTER" wrappingWidth="132.0" GridPane.rowIndex="5">
+          <font>
+            <Font name="Arial Bold" size="13.0" />
+          </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%APPOINTMENTID" textAlignment="CENTER" wrappingWidth="137.0">
+          <font>
+            <Font name="Arial Bold" size="13.0" />
+          </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%TITLE" textAlignment="CENTER" wrappingWidth="138.0" GridPane.rowIndex="3">
+          <font>
+            <Font name="Arial Bold" size="13.0" />
+          </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%DESCRIPTION" textAlignment="CENTER" wrappingWidth="140.0" GridPane.rowIndex="4">
+          <font>
+            <Font name="Arial Bold" size="13.0" />
+          </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%STARTDATE" textAlignment="CENTER" wrappingWidth="144.0" GridPane.rowIndex="8">
+          <font>
+            <Font name="Arial Bold" size="13.0" />
+          </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%ENDDATE" textAlignment="CENTER" wrappingWidth="140.0" GridPane.rowIndex="10">
+          <font>
+            <Font name="Arial Bold" size="13.0" />
+          </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%STARTTIME" textAlignment="CENTER" wrappingWidth="144.0" GridPane.rowIndex="9">
+          <font>
+            <Font name="Arial Bold" size="13.0" />
+          </font>
+        </Text>
+        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+          <children>
+            <ComboBox fx:id="Starthour" prefHeight="26.0" prefWidth="84.0">
+              <HBox.margin>
+                <Insets top="5.0" />
+              </HBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="Startmin" prefHeight="26.0" prefWidth="88.0">
+              <HBox.margin>
+                <Insets top="5.0" />
+              </HBox.margin>
+            </ComboBox>
+          </children>
+        </HBox>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%ENDTIME" textAlignment="CENTER" wrappingWidth="144.0" GridPane.rowIndex="11">
+          <font>
+            <Font name="Arial Bold" size="13.0" />
+          </font>
+        </Text>
+        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+          <children>
+            <ComboBox fx:id="endHour" minWidth="-Infinity" prefHeight="26.0" prefWidth="84.0" promptText="0">
+              <HBox.margin>
+                <Insets bottom="5.0" top="5.0" />
+              </HBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="endMin" minWidth="-Infinity" prefHeight="26.0" prefWidth="88.0" promptText="00">
+              <HBox.margin>
+                <Insets bottom="5.0" top="5.0" />
+              </HBox.margin>
+            </ComboBox>
+          </children>
+        </HBox>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%CUSTOMERID" textAlignment="CENTER" wrappingWidth="137.0" GridPane.rowIndex="1">
+          <font>
+            <Font name="Arial Bold" size="13.0" />
+          </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%USERID" textAlignment="CENTER" wrappingWidth="137.0" GridPane.rowIndex="2">
+          <font>
+            <Font name="Arial Bold" size="13.0" />
+          </font>
+        </Text>
+        <ComboBox fx:id="customerIdCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <ComboBox fx:id="userIdCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%TYPE" textAlignment="CENTER" wrappingWidth="132.0" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="TypeTextBox" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ComboBox fx:id="contactCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%CONTACTNAME" textAlignment="CENTER" wrappingWidth="132.0" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Text>
+      </children>
+    </GridPane>
+    <Button fx:id="CancelBtn" layoutX="184.0" layoutY="645.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="77.0" text="Cancel" />
+    <Button fx:id="SaveBtn" layoutX="286.0" layoutY="645.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="91.0" text="Save" />
+    <Text fx:id="errors" fill="#dd1616" layoutX="46.0" layoutY="621.0" strokeType="OUTSIDE" strokeWidth="0.0" text="text" wrappingWidth="396.0">
+      <font>
+        <Font size="15.0" />
+      </font>
+    </Text>
+
+
+
+  </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Label?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="com.sw_two.ReportOfAppointmentByContact">
+    <ComboBox fx:id="UserCombo" layoutX="53.0" layoutY="30.0" prefWidth="150.0" />
+    <HBox layoutX="414.0" layoutY="140.0" prefHeight="26.0" prefWidth="200.0">
+        <children>
+            <RadioButton fx:id="AllFilter" mnemonicParsing="false" selected="true" text="All" toggleGroup="$FilterBy">
+                <toggleGroup>
+                    <ToggleGroup fx:id="FilterBy" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="MonthlyFilter" mnemonicParsing="false" text="Month" toggleGroup="$FilterBy">
+                <HBox.margin>
+                    <Insets left="20.0" />
+                </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="WeeklyFilter" mnemonicParsing="false" text="Week" toggleGroup="$FilterBy">
+                <HBox.margin>
+                    <Insets left="20.0" />
+                </HBox.margin>
+            </RadioButton>
+        </children>
+    </HBox>
+    
+    <TableView fx:id="AppointmentTable" layoutX="16.0" layoutY="179.0" prefHeight="200.0" prefWidth="995.0">
+        <columns>
+            <TableColumn fx:id="AppointmentId" prefWidth="90.0" text="%APPOINTMENTID" />
+            <TableColumn fx:id="Title" minWidth="0.0" prefWidth="90.0" text="%TITLE" />
+            <TableColumn fx:id="TYPE" prefWidth="90.0" text="%TYPE" />
+            <TableColumn fx:id="Description" prefWidth="90.0" text="%DESCRIPTION" />
+
+            <TableColumn fx:id="StartDate" prefWidth="90.0" text="%STARTDATE" />
+            <TableColumn fx:id="StarTime" prefWidth="90.0" text="%STARTTIME" />
+            <TableColumn fx:id="EndDate" prefWidth="90.0" text="%ENDDATE" />
+            <TableColumn fx:id="EndTime" prefWidth="90.0" text="%ENDTIME" />
+            <TableColumn fx:id="CostumerId" prefWidth="90.0" text="%CUSTOMERID" />
+            <!--            <TableColumn fx:id="Location" prefWidth="90.0" text="%LOCATION" />-->
+
+            <!--            <TableColumn fx:id="CONTACTNAME" prefWidth="90.0" text="%CONTACTNAME" />-->
+            <!--            <TableColumn fx:id="UserId" minWidth="0.0" prefWidth="90.0" text="%USERID" />-->
+        </columns>
+    </TableView>
+    <Label layoutX="100.0" layoutY="100.0" text="A schedule for each contact in your organization"></Label>
+   <Text fx:id="Staatus" layoutX="256.0" layoutY="48.0" strokeType="OUTSIDE"  visible="false" strokeWidth="0.0" text="Status" />
+</AnchorPane>

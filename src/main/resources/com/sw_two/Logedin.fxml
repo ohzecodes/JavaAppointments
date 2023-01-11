@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="722.0" prefHeight="780.0" prefWidth="1023.0"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sw_two.LogedinCtrl">
+  <children>
+      <VBox layoutX="14.0" layoutY="12.0" prefHeight="50.0" prefWidth="693.0">
+        <children>
+          <Button fx:id="ReportByType" mnemonicParsing="false" prefHeight="26.0" text="%COUNTREPORTBYTYPE">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Button>
+            <Button fx:id="AppointmentReport" mnemonicParsing="false" text="%APPOINTMENTREPORTBYCONTACTNAME" >
+                <VBox.margin>
+                    <Insets top="10.0" />
+                </VBox.margin></Button>
+            <Button fx:id="ReportsByCustomer" mnemonicParsing="false" text="%COUNTREPORTBYCUSTOMER" >
+                <VBox.margin>
+                    <Insets top="10.0" />
+                </VBox.margin></Button>
+
+        </children>
+      </VBox>
+      <HBox layoutX="412.0" layoutY="147.0" prefHeight="26.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="AllFilter" mnemonicParsing="false" selected="true" text="All" toggleGroup="$FilterBy">
+               <toggleGroup>
+                  <ToggleGroup fx:id="FilterBy" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="MonthlyFilter" mnemonicParsing="false" text="Month" toggleGroup="$FilterBy">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="WeeklyFilter" mnemonicParsing="false" text="Week" toggleGroup="$FilterBy">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </RadioButton>
+         </children>
+      </HBox>
+    <VBox layoutX="777.0" layoutY="12.0" prefHeight="142.0" prefWidth="238.0" style="-fx-border-color: black;">
+      <children>
+        <GridPane prefHeight="68.0" prefWidth="203.0">
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.82147216796875" minWidth="10.0" prefWidth="89.579833984375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.420166015625" minWidth="10.0" prefWidth="139.420166015625" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+          <children>
+
+            <Text fx:id="uid" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="137.96417236328125" GridPane.columnIndex="1" />
+            <Text fx:id="uname" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="97.240234375" />
+              <Label prefHeight="18.0" prefWidth="96.0" style="-fx-alignment: center; -fx-wrap-text: true;" text="%TIMEZONE" textAlignment="CENTER" GridPane.rowIndex="1" />
+      
+              <Text fx:id="timezone" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.8970947265625" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+          </children>
+        </GridPane>
+        <Button fx:id="logoutbtn" mnemonicParsing="false" prefHeight="58.0" prefWidth="232.0" text="%LOGOUT">
+          <VBox.margin>
+            <Insets bottom="5.0" top="10.0" />
+          </VBox.margin>
+        </Button>
+      </children>
+    </VBox>
+
+          <Text layoutX="188.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%APPOINTMENTS" textAlignment="CENTER" wrappingWidth="652.0">
+      <font>
+        <Font size="24.0" />
+      </font>
+    </Text>
+    <TableView fx:id="AppointmentTable" layoutX="16.0" layoutY="179.0" prefHeight="200.0" prefWidth="995.0">
+      <columns>
+        <TableColumn fx:id="AppointmentId" prefWidth="90.0" text="%APPOINTMENTID" />
+        <TableColumn fx:id="Title" minWidth="0.0" prefWidth="90.0" text="%TITLE" />
+        <TableColumn fx:id="Description" prefWidth="90.0" text="%DESCRIPTION" />
+        <TableColumn fx:id="Location" prefWidth="90.0" text="%LOCATION" />
+        <TableColumn fx:id="TYPE" prefWidth="90.0" text="%TYPE" />
+        <TableColumn fx:id="CONTACTNAME" prefWidth="90.0" text="%CONTACTNAME" />
+        <TableColumn fx:id="StarTime" prefWidth="90.0" text="%STARTTIME" />
+        <TableColumn fx:id="EndTime" prefWidth="90.0" text="%ENDTIME" />
+        <TableColumn fx:id="StartDate" prefWidth="90.0" text="%STARTDATE" />
+
+        <TableColumn fx:id="EndDate" prefWidth="90.0" text="%ENDDATE" />
+        <TableColumn fx:id="CostumerId" prefWidth="90.0" text="%CUSTOMERID" />
+        <TableColumn fx:id="UserId" minWidth="0.0" prefWidth="90.0" text="%USERID" />
+      </columns>
+    </TableView>
+      <ButtonBar layoutX="333.0" layoutY="384.0" prefHeight="48.0" prefWidth="319.0">
+        <buttons>
+        <Button fx:id="AddAppointment" mnemonicParsing="false" text="%ADD" />
+        <Button fx:id="ModifyAppointment" mnemonicParsing="false" text="%MODIFY" />
+        <Button fx:id="DeleteAppointment" mnemonicParsing="false" text="%DELETE" />
+        </buttons>
+      </ButtonBar>
+
+
+
+    <Text layoutX="188.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%CUSTOMER" textAlignment="CENTER" wrappingWidth="652.0">
+      <font>
+        <Font size="24.0" />
+      </font>
+    </Text>
+    <TableView fx:id="CustomerTable" layoutX="16.0" layoutY="502.0" prefHeight="200.0" prefWidth="995.0">
+      <columns>
+        <TableColumn fx:id="CUSTOMER_ID" prefWidth="90.0" text="%CUSTOMERID" />
+        <TableColumn fx:id="CUSTOMER_NAME" prefWidth="90.0" text="%CUSTOMER_NAME" />
+        <TableColumn fx:id="CUSTOMER_ADDRESS" prefWidth="90.0" text="%CUSTOMER_ADDRESS" />
+        <TableColumn fx:id="PHONE" prefWidth="90.0" text="%PHONE" />
+        <TableColumn fx:id="State" prefWidth="90.0" text="%STATE" />
+        <TableColumn fx:id="COUNTRY" prefWidth="90.0" text="%COUNTRY" />
+        <TableColumn fx:id="POSTAL" prefWidth="90.0" text="%POSTAL" />
+        <TableColumn fx:id="CREATED_ON" prefWidth="90.0" text="%CREATED_ON" />
+        <TableColumn fx:id="LAST_UPDATE_ON" prefWidth="90.0" text="%LAST_UPDATE_ON" />
+
+        <TableColumn fx:id="CREATED_BY" prefWidth="90.0" text="%CREATED_BY" />
+
+
+
+        <TableColumn fx:id="LAST_UPDATED_BY" prefWidth="90.0" text="%LAST_UPDATED_BY" />
+      </columns>
+    </TableView>
+      <ButtonBar layoutX="285.0" layoutY="712.0" prefHeight="40.0" prefWidth="365.0">
+        <buttons>
+        <Button fx:id="AddCustomer" mnemonicParsing="false" text="%ADD" />
+        <Button fx:id="ModifyCustomer" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="%MODIFY" />
+        <Button fx:id="DeleteCustomer" mnemonicParsing="false" prefHeight="25.0" text="%DELETE" />
+        </buttons>
+      </ButtonBar>
+
+
+
+
+  </children>
+</AnchorPane>
